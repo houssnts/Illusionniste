@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet - L'Illusionniste</title>
+    <style>
+        /* Import des polices */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@300;400;700&family=Fira+Code&display=swap');
+
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Merriweather', serif;
+            color: #2c3e50;
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .page {
+            background: white;
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: 0 auto 30px auto;
+            padding: 2.5cm;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* TITRES & STYLE */
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .main-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3.5em; 
+            font-weight: 900; 
+            color: #2980b9; 
+            margin: 20px 0;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.4em;
+            color: #7f8c8d;
+            font-weight: 300;
+            margin-bottom: 60px;
+            border-top: 1px solid #bdc3c7;
+            border-bottom: 1px solid #bdc3c7;
+            padding: 10px 0;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2980b9;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            margin-top: auto;
+        }
+
+        .info-box p { margin: 5px 0; font-family: 'Roboto', sans-serif; }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #2980b9;
+            border-bottom: 3px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            font-size: 1.6em;
+        }
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #34495e;
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        p { text-align: justify; margin-bottom: 15px; }
+
+        /* CADRES & CODE */
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85em;
+            overflow-x: auto;
+            margin: 25px 0;
+            white-space: pre;
+            border-left: 5px solid #2980b9;
+        }
+        .code-kw { color: #569cd6; } 
+        .code-fn { color: #dcdcaa; }
+        .code-com { color: #6a9955; font-style: italic; }
+
+        .schema-box {
+            border: 1px solid #ecf0f1;
+            background-color: #fafafa;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .schema-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .schema-placeholder img {
+            max-width: 95%;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .caption {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .math-block {
+            background-color: #f1f8ff;
+            border-left: 4px solid #2980b9;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        .toc {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .toc b { color: #2980b9; margin-right: 10px; }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .page { box-shadow: none; margin: 0; width: 100%; min-height: auto; padding: 0; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page cover-page" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        
+        <div style="margin-top: 50px; width: 100%; text-align: center;">
+            <div style="font-size: 1.2em; font-weight: bold; color: #7f8c8d;">BUT 3 INFORMATIQUE</div>
+            <div style="margin-top: 10px; font-weight: bold; color: #2c3e50;">R.5.A06 Introduction à la programmation multimédia</div>
+        </div>
+
+        <div style="margin: 60px auto; width: 100%; text-align: center;">
+            <img src="logo.png" alt="Logo L'Illusionniste" style="width: 220px; display: inline-block;">
+        </div>
+
+        <div style="margin-bottom: 60px; width: 100%; text-align: center;">
+            <h1>RAPPORT DE PROJET</h1>
+            <div class="main-title">L'ILLUSIONNISTE</div>
+            <div class="subtitle">Echec et mat hehehe...</div>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Étudiant :</strong> Hocine ZARED</p>
+            <p><strong>Groupe :</strong> Maké-Maké</p>
+            <p><strong>Année :</strong> 2025 - 2026</p>
+        </div>
+    </div>
+
+    <div class="page page-break">
+        <h2>Sommaire</h2>
+        <div class="toc">
+            <ul>
+                <li><b>1.</b> Contexte : Pourquoi ce n'est pas "juste un jeu"</li>
+                <li><b>2.</b> Concepts théoriques (Adelson & RGB)</li>
+                <li><b>3.</b> Réalisation Technique et Limitations</li>
+                <li><b>4.</b> Interface et Expérience Utilisateur (UX)</li>
+                <li><b>5.</b> Conclusion et Perspectives</li>
+            </ul>
+        </div>
+
+        <h2>1. Contexte : Pourquoi ce n'est pas "juste un jeu"</h2>
+        <p>
+            Lorsque le sujet du projet de <strong>R.5.A06</strong> nous a été présenté, je ne voulais pas simplement "recoder" un jeu classique comme un Snake ou un Tetris. J'avais l'impression que cela ne mettrait pas assez en valeur les spécificités du cours sur le traitement de l'image.
+        </p>
+        <p>
+            En relisant le support de cours pour trouver l'inspiration, j'ai été stoppé net par une phrase du Chapitre 1 : <em>"Le cerveau nous ment"</em>.
+        </p>
+        <p>
+            Cette phrase m'a marqué. Elle signifie que la donnée informatique (le pixel stocké en mémoire) est une vérité absolue, alors que ce que l'utilisateur voit est une interprétation subjective. J'ai donc décidé de créer <strong>"L'Illusionniste"</strong>, un logiciel expérimental qui piège le cerveau de l'utilisateur pour lui faire toucher du doigt les limites de sa propre vision.
+        </p>
+
+        <h2>2. Concepts théoriques</h2>
+        <p>Mon application repose sur la mise en pratique de deux phénomènes physiques et physiologiques vus en cours.</p>
+
+        <h3>Le Contraste Simultané</h3>
+        <p>
+            L'œil humain juge les couleurs par comparaison. C'est le principe de l'illusion d'Adelson vue en cours : un gris moyen paraît blanc sur fond noir, et noir sur fond blanc. Dans mon programme, je sature la rétine de l'utilisateur avec des couleurs vives autour de la cible pour fausser son jugement.
+        </p>
+        
+        <div class="schema-box">
+            <div class="schema-placeholder">
+                <img src="adelson.png" alt="Illusion Adelson">
+            </div>
+            <div class="caption">Fig 1. L'illusion d'Adelson : le contexte modifie la couleur perçue.</div>
+        </div>
+    </div>
+
+    <div class="page page-break">
+        <h3>La Synthèse Additive (Modèle RGB)</h3>
+        <p>
+            Contrairement à la peinture, l'écran fonctionne en <strong>synthèse additive</strong>. Pour obtenir du Jaune, l'utilisateur doit comprendre qu'il faut additionner le Rouge et le Vert. Je voulais rendre ludique ce raisonnement peu naturel.
+        </p>
+
+        <div class="schema-box" style="margin-bottom: 40px;">
+            <div class="schema-placeholder">
+                <img src="rgb.jpg" alt="Synthèse Additive RGB" style="max-width: 50%;">
+            </div>
+            <div class="caption">Fig 2. Mélange additif des couleurs lumière.</div>
+        </div>
+
+        <h2>3. Réalisation Technique et Limitations</h2>
+        <p>
+            Conformément aux attendus du projet, voici le détail des choix d'implémentation.
+        </p>
+
+        <h3>Techniques informatiques employées</h3>
+        <ul>
+            <li><strong>Langage & Outils :</strong> Le projet est développé en <strong>Python 3</strong> avec la bibliothèque <strong>Pygame</strong>. Ce choix permet un accès bas-niveau à la gestion des pixels et des événements.</li>
+            <li><strong>Données Source (Procédural) :</strong> Aucune image bitmap externe (.jpg, .png) n'est chargée. L'intégralité des visuels est générée via des algorithmes (module <code>random</code>) et des primitives vectorielles (<code>draw.rect</code>). Cela garantit une application très légère.</li>
+        </ul>
+
+        <h3>Techniques propres au multimédia</h3>
+        <p>
+            Pour éviter que les 100 rectangles ne fassent clignoter l'écran, je les dessine d'abord en mémoire cache avant de les envoyer à l'écran.
+
+        <div class="code-block">
+<span class="code-kw">def</span> <span class="code-fn">generate_background</span>(width, height):
+    bg_surface = pygame.Surface((width, height))
+    
+    <span class="code-kw">for</span> _ <span class="code-kw">in</span> range(100):
+        color = (random.randint(0,255), ...)
+        pygame.draw.rect(bg_surface, color, ...)
+        
+    <span class="code-kw">return</span> bg_surface
+        </div>
+
+        <h3>Limitations de la réalisation</h3>
+        <p>
+            <strong>1. Types d'entrée :</strong> L'interaction se fait <strong>exclusivement au Clavier</strong>. J'ai volontairement exclu la souris pour une raison d'Expérience Utilisateur : cela force le joueur à réfléchir au canal (R, G ou B) qu'il modifie, plutôt que de cliquer au hasard sur une palette.
+        </p>
+        <p>
+            <strong>2. Limitation Mathématique :</strong> La validation de la victoire repose sur un seuil de distance mathématique fixe (distance < 15). C'est une limite car l'œil humain n'a pas la même sensibilité pour toutes les couleurs (nous sommes plus sensibles au vert qu'au bleu), ce que la formule simple ne prend pas en compte.
+        </p>
+    </div>
+
+    <div class="page page-break">
+        <h2>4. Interface et Expérience Utilisateur</h2>
+        <p>
+            L'expérience repose sur deux phases distinctes. L'interface change radicalement pour créer un effet de surprise et de révélation.
+        </p>
+
+        <div class="schema-box">
+            <div class="schema-placeholder" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                
+                <div style="width: 48%;">
+                    <img src="interface_jeu.png" alt="Phase de Jeu" style="width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+                    <div style="font-size: 0.8em; color: #7f8c8d; margin-top: 5px; font-weight: bold;">Phase 1 : L'Atelier (Piège)</div>
+                </div>
+
+                <div style="width: 48%;">
+                    <img src="interface_resultat.png" alt="Phase de Résultat" style="width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+                    <div style="font-size: 0.8em; color: #7f8c8d; margin-top: 5px; font-weight: bold;">Phase 2 : Le Résultat (Neutre)</div>
+                </div>
+
+            </div>
+            <div class="caption" style="margin-top: 15px;">Fig 3. Comparaison avant/après la validation par le joueur.</div>
+        </div>
+
+        <h3>Analyse Algorithmique : La Victoire</h3>
+        <p>
+            Pour valider le résultat, j'ai dû résoudre le problème de la perception subjective. Comparer <code>if couleur == cible</code> est impossible car l'œil ne voit pas les différences minimes.
+        </p>
+        <p>
+            J'ai utilisé la <strong>Distance Euclidienne dans l'espace 3D</strong> (RGB) pour calculer un score de précision fiable :
+        </p>
+
+        <div class="schema-box" style="margin: 20px 0; padding: 10px;">
+            <div class="schema-placeholder">
+                <img src="cube.png" alt="Cube RGB" style="max-width: 40%;">
+            </div>
+        </div>
+
+        <div class="math-block">
+            d = √ [ (Rcible - Rjoueur)² + (Gcible - Gjoueur)² + (Bcible - Bjoueur)² ]
+        </div>
+    </div>
+
+    <div class="page page-break">
+        <h2>5. Conclusion et Perspectives</h2>
+        <p>
+            Ce projet <strong>"L'Illusionniste"</strong> a été une excellente manière de valider mes compétences en BUT 3.
+        </p>
+        <p>
+            D'un point de vue technique, je maîtrise désormais la boucle d'événements Pygame et la manipulation des tuples RGB. Mais c'est surtout d'un point de vue conceptuel que j'ai progressé. J'ai compris que le <strong>Traitement d'Image</strong>, ce n'est pas seulement afficher des pixels : c'est comprendre comment ces pixels sont interprétés par l'humain.
+        </p>
+        
+        <h3>Perspective d'évolution : Le mode "Daltonien"</h3>
+        <p>
+            Si je devais aller plus loin, la suite logique serait d'intégrer un simulateur de daltonisme pour sensibiliser à l'accessibilité.
+        </p>
+        <br><br>
+        <hr style="border: 0; border-top: 1px solid #ccc;">
+        <p style="text-align: center; font-style: italic; font-size: 0.9em; margin-top: 20px;">
+            Fin du rapport - Hocine ZARED
+        </p>
+    </div>
+
+</body>
+</html>
